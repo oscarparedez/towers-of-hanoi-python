@@ -36,7 +36,7 @@ def remove(stack):
     else:
         return -sys.maxsize
 
-def moveDisksBetweenTwoPoles(stackOrigen, stackDestino, torreOrigen, torreDestino):
+def diskMovement(stackOrigen, stackDestino, torreOrigen, torreDestino):
     origenTopDisk = remove(stackOrigen)
     destinoTopDisk = remove(stackDestino)
  
@@ -78,13 +78,13 @@ def TOH(stackOrigen, stackAuxiliar, stackDestino):
     # Se realizan los movimientos respectivos siguiendo el patrón a continuación
     for i in range(1, totalMovimientos):
         if (i % 3 == 1):
-            moveDisksBetweenTwoPoles(stackOrigen, stackDestino, torreOrigen, torreDestino)
+            diskMovement(stackOrigen, stackDestino, torreOrigen, torreDestino)
    
         elif (i % 3 == 2):
-            moveDisksBetweenTwoPoles(stackOrigen, stackAuxiliar, torreOrigen, torreAuxiliar)
+            diskMovement(stackOrigen, stackAuxiliar, torreOrigen, torreAuxiliar)
    
         elif (i % 3 == 0):
-            moveDisksBetweenTwoPoles(stackAuxiliar, stackDestino, torreAuxiliar, torreDestino)
+            diskMovement(stackAuxiliar, stackDestino, torreAuxiliar, torreDestino)
 
 stackA = Stack()
 stackB = Stack()
