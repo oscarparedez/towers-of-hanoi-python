@@ -8,7 +8,9 @@
 # El disco # 1 es el más pequeño
 # El disco # n es el más grande
 
-n = 2
+import time
+
+n = 18
 stackA = 'A'
 stackB = 'B'
 stackC = 'C'
@@ -21,4 +23,6 @@ def TOH(n, origen, destino, aux):
     print ("Moviendo el disco #", n, "desde la varilla origen (", origen, ") a la varilla destino (", destino, ")")
     TOH(n-1, aux, destino, origen)
 
+start_time = time.time()
 TOH(n, stackA, stackB, stackC)
+print("Total time: ", time.time() - start_time)

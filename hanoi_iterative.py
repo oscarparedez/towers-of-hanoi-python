@@ -8,7 +8,8 @@
 # El disco # 1 es el más pequeño
 # El disco # n es el más grande
 import sys
-n = 2
+import time
+n = 18
 
 class Stack:
     def __init__(self):
@@ -86,8 +87,12 @@ def TOH(stackOrigen, stackAuxiliar, stackDestino):
         elif (i % 3 == 0):
             diskMovement(stackAuxiliar, stackDestino, torreAuxiliar, torreDestino)
 
+start_time = time.time()
+
 stackA = Stack()
 stackB = Stack()
 stackC = Stack()
  
 TOH(stackA, stackC, stackB)
+
+print("Total time: ", time.time() - start_time)
