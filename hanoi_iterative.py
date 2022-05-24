@@ -95,4 +95,5 @@ stackC = Stack()
  
 TOH(stackA, stackC, stackB)
 
+print("Disk quantity: ", n)
 print("Total time: ", time.time() - start_time)

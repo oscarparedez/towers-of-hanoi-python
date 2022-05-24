@@ -25,4 +25,5 @@ def TOH(n, origen, destino, aux):
 
 start_time = time.time()
 TOH(n, stackA, stackB, stackC)
+print("Disk quantity: ", n)
 print("Total time: ", time.time() - start_time)
